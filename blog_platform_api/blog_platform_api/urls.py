@@ -25,6 +25,5 @@ urlpatterns = [
     path('api/', include('blog.urls')), 
 
     # auth
-    path('api/auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/auth/', include('accounts.urls')),
 ]
